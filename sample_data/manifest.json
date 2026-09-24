@@ -1,0 +1,156 @@
+{
+  "generated_by": "scripts/generate_sample_data.py",
+  "documents": {
+    "halcyon_employee_handbook.pdf": {
+      "pages": 7,
+      "sections": {
+        "1": [
+          "1. Welcome and Purpose",
+          "2. Employment Basics"
+        ],
+        "2": [
+          "3. Paid Time Off",
+          "4. Sick Leave",
+          "5. Parental Leave"
+        ],
+        "3": [
+          "6. Remote and Hybrid Work",
+          "7. Expense Reimbursement"
+        ],
+        "4": [
+          "8. Company Holidays",
+          "9. Performance Reviews",
+          "10. Code of Conduct"
+        ],
+        "5": [
+          "11. IT Equipment and Acceptable Use",
+          "12. Resignation and Offboarding"
+        ],
+        "6": [
+          "13. Compensation and Benefits",
+          "14. Learning and Development",
+          "15. Workplace Safety and Flight Test Rules",
+          "16. Amendments and Acknowledgement"
+        ],
+        "7": []
+      }
+    },
+    "aurora_x200_technical_specification.pdf": {
+      "pages": 6,
+      "sections": {
+        "1": [
+          "1. Product Overview",
+          "2. Airframe and Dimensions",
+          "3. Power and Flight Performance"
+        ],
+        "2": [
+          "4. Environmental Limits",
+          "5. Sensor Payload",
+          "6. Connectivity and Software"
+        ],
+        "3": [
+          "7. Docking Station AX200-DOCK-2",
+          "8. Safety and Certifications"
+        ],
+        "4": [
+          "9. Operating Modes and Mission Planning",
+          "10. Data Handling and Storage"
+        ],
+        "5": [
+          "11. Specification Summary"
+        ],
+        "6": [
+          "12. Ordering Information and Part Numbers",
+          "13. Warranty Summary"
+        ]
+      }
+    },
+    "aurora_x200_installation_and_maintenance_guide.pdf": {
+      "pages": 6,
+      "sections": {
+        "1": [
+          "1. About This Guide",
+          "2. Unboxing Checklist"
+        ],
+        "2": [
+          "3. Site Requirements for the Docking Station",
+          "4. Mounting the Docking Station",
+          "5. Initial Power-Up and Network Configuration"
+        ],
+        "3": [
+          "6. Calibration Procedure",
+          "7. Maintenance Schedule"
+        ],
+        "4": [
+          "8. Propeller Replacement",
+          "9. Battery Care",
+          "10. Commissioning Flight and Handover"
+        ],
+        "5": [
+          "11. Cleaning, Storage and Transport",
+          "12. Error Codes",
+          "13. Warranty Terms"
+        ],
+        "6": [
+          "14. Technical Support"
+        ]
+      }
+    },
+    "halcyon_information_security_policy.pdf": {
+      "pages": 6,
+      "sections": {
+        "1": [
+          "1. Purpose and Scope",
+          "2. Roles and Responsibilities",
+          "3. Password and Authentication Standards"
+        ],
+        "2": [
+          "4. Multi-Factor Authentication",
+          "5. Data Classification",
+          "6. Data Retention and Disposal"
+        ],
+        "3": [
+          "7. Incident Response",
+          "8. Vendor Security Reviews"
+        ],
+        "4": [
+          "9. Acceptable Use",
+          "10. Bring Your Own Device (BYOD)",
+          "11. Encryption and Network Security",
+          "12. Access Control and Account Lifecycle"
+        ],
+        "5": [
+          "13. Logging, Monitoring and Physical Security",
+          "14. Security Awareness Training"
+        ],
+        "6": [
+          "Appendix A: Example Phishing Message",
+          "Appendix B: Policy Exceptions and Review"
+        ]
+      }
+    },
+    "halcyon_q2_fy2026_business_review.pdf": {
+      "pages": 4,
+      "sections": {
+        "1": [
+          "1. Executive Summary",
+          "2. Revenue by Segment",
+          "3. Profitability and Cash"
+        ],
+        "2": [
+          "4. Aurora X200 Shipments and Installed Base",
+          "5. Headcount by Department"
+        ],
+        "3": [
+          "6. Top Customers",
+          "7. Regional Performance and Customer Success",
+          "8. Key Risks"
+        ],
+        "4": [
+          "9. Product Roadmap",
+          "10. Outlook"
+        ]
+      }
+    }
+  }
+}

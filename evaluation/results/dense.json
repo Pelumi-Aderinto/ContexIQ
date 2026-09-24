@@ -1,0 +1,2267 @@
+{
+  "config": {
+    "timestamp": "2026-09-24T07:07:00+00:00",
+    "git_commit": "c1047f6",
+    "dataset_path": "evaluation/dataset.json",
+    "dataset_version": 1,
+    "document_count": 5,
+    "question_count": 27,
+    "question_limit": null,
+    "workspace_id": "eval",
+    "data_dir": "/tmp/contextiq-eval-wlxq8fqs",
+    "embedding_model": "BAAI/bge-small-en-v1.5",
+    "embedding_dimension": 384,
+    "chunk_size": 1000,
+    "chunk_overlap": 150,
+    "retrieval_mode": "dense",
+    "top_k": 5,
+    "k_values": [
+      1,
+      3,
+      5,
+      10
+    ],
+    "rerank_enabled": false,
+    "rerank_model": null,
+    "llm_provider": "extractive",
+    "llm_model": null,
+    "answer_mode": "extractive",
+    "ingestion": [
+      {
+        "filename": "aurora_x200_installation_and_maintenance_guide.pdf",
+        "outcome": "indexed",
+        "page_count": 6,
+        "chunk_count": 18,
+        "processing_ms": 1191.49
+      },
+      {
+        "filename": "aurora_x200_technical_specification.pdf",
+        "outcome": "indexed",
+        "page_count": 6,
+        "chunk_count": 15,
+        "processing_ms": 1221.5
+      },
+      {
+        "filename": "halcyon_employee_handbook.pdf",
+        "outcome": "indexed",
+        "page_count": 7,
+        "chunk_count": 20,
+        "processing_ms": 1173.79
+      },
+      {
+        "filename": "halcyon_information_security_policy.pdf",
+        "outcome": "indexed",
+        "page_count": 6,
+        "chunk_count": 18,
+        "processing_ms": 1045.84
+      },
+      {
+        "filename": "halcyon_q2_fy2026_business_review.pdf",
+        "outcome": "indexed",
+        "page_count": 4,
+        "chunk_count": 11,
+        "processing_ms": 684.74
+      }
+    ]
+  },
+  "aggregate": {
+    "question_count": 27,
+    "retrieval_question_count": 22,
+    "answerable_count": 22,
+    "unanswerable_count": 5,
+    "recall_at_k": {
+      "1": 0.5909090909090909,
+      "3": 0.75,
+      "5": 0.8636363636363636,
+      "10": 0.9090909090909091
+    },
+    "hit_rate_at_k": {
+      "1": 0.7272727272727273,
+      "3": 0.8636363636363636,
+      "5": 0.9090909090909091,
+      "10": 0.9545454545454546
+    },
+    "mrr": 0.8143939393939394,
+    "citation_validity": 1.0,
+    "citation_page_accuracy": 0.45454545454545453,
+    "answer_correctness": 0.678030303030303,
+    "abstention_accuracy": 0.0,
+    "false_abstention_rate": 0.0,
+    "abstention_precision": null,
+    "abstention_recall": 0.0,
+    "injection_check_count": 1,
+    "injection_check_pass_rate": 1.0,
+    "latency_ms": {
+      "retrieval": {
+        "p50": 15.877575991908088,
+        "p95": 20.62437799759209,
+        "mean": 16.559442705733495,
+        "max": 26.0426550230477,
+        "n": 27
+      },
+      "generation": {
+        "p50": 0.0,
+        "p95": 0.0,
+        "mean": 0.0,
+        "max": 0.0,
+        "n": 27
+      },
+      "total": {
+        "p50": 17.098915006499738,
+        "p95": 21.954910014756024,
+        "mean": 17.400868260732818,
+        "max": 26.85208900948055,
+        "n": 27
+      },
+      "search": {
+        "p50": 15.691751992562786,
+        "p95": 21.167403989238665,
+        "mean": 16.6416951493981,
+        "max": 22.50137599185109,
+        "n": 27
+      }
+    }
+  },
+  "by_type": [
+    {
+      "type": "answerable",
+      "count": 16,
+      "recall_at_k": {
+        "1": 0.65625,
+        "3": 0.78125,
+        "5": 0.9375,
+        "10": 0.9375
+      },
+      "hit_rate_at_k": {
+        "1": 0.6875,
+        "3": 0.875,
+        "5": 0.9375,
+        "10": 0.9375
+      },
+      "mrr": 0.796875,
+      "citation_validity": 1.0,
+      "citation_page_accuracy": 0.41666666666666663,
+      "answer_correctness": 0.71875,
+      "abstention_rate": 0.0
+    },
+    {
+      "type": "cross_document",
+      "count": 6,
+      "recall_at_k": {
+        "1": 0.4166666666666667,
+        "3": 0.6666666666666666,
+        "5": 0.6666666666666666,
+        "10": 0.8333333333333334
+      },
+      "hit_rate_at_k": {
+        "1": 0.8333333333333334,
+        "3": 0.8333333333333334,
+        "5": 0.8333333333333334,
+        "10": 1.0
+      },
+      "mrr": 0.8611111111111112,
+      "citation_validity": 1.0,
+      "citation_page_accuracy": 0.5555555555555555,
+      "answer_correctness": 0.5694444444444444,
+      "abstention_rate": 0.0
+    },
+    {
+      "type": "unanswerable",
+      "count": 5,
+      "recall_at_k": null,
+      "hit_rate_at_k": null,
+      "mrr": null,
+      "citation_validity": 1.0,
+      "citation_page_accuracy": null,
+      "answer_correctness": 0.0,
+      "abstention_rate": 0.0
+    }
+  ],
+  "questions": [
+    {
+      "id": "q01",
+      "type": "answerable",
+      "question": "How much is Halcyon's one-time home office stipend, and what monthly connectivity allowance does the company pay?",
+      "answerable": true,
+      "retrieved_pages": [
+        {
+          "filename": "halcyon_employee_handbook.pdf",
+          "page": 6
+        },
+        {
+          "filename": "halcyon_employee_handbook.pdf",
+          "page": 3
+        },
+        {
+          "filename": "halcyon_employee_handbook.pdf",
+          "page": 2
+        },
+        {
+          "filename": "halcyon_employee_handbook.pdf",
+          "page": 4
+        },
+        {
+          "filename": "halcyon_q2_fy2026_business_review.pdf",
+          "page": 3
+        },
+        {
+          "filename": "halcyon_employee_handbook.pdf",
+          "page": 1
+        },
+        {
+          "filename": "halcyon_q2_fy2026_business_review.pdf",
+          "page": 1
+        },
+        {
+          "filename": "aurora_x200_technical_specification.pdf",
+          "page": 4
+        }
+      ],
+      "recall_at_k": {
+        "1": 0.0,
+        "3": 1.0,
+        "5": 1.0,
+        "10": 1.0
+      },
+      "hit_at_k": {
+        "1": false,
+        "3": true,
+        "5": true,
+        "10": true
+      },
+      "mrr": 0.5,
+      "citation_validity": 1.0,
+      "citation_page_accuracy": 0.3333333333333333,
+      "answer_correctness": 1.0,
+      "abstained": false,
+      "answer_mode": "extractive",
+      "citations": [
+        {
+          "filename": "halcyon_employee_handbook.pdf",
+          "page": 6
+        },
+        {
+          "filename": "halcyon_employee_handbook.pdf",
+          "page": 3
+        },
+        {
+          "filename": "halcyon_employee_handbook.pdf",
+          "page": 2
+        }
+      ],
+      "invalid_citation_ids": [],
+      "forbidden_terms_found": [],
+      "injection_check_passed": null,
+      "search_ms": 20.64825699198991,
+      "retrieval_ms": 17.06707401899621,
+      "generation_ms": 0.0,
+      "total_ms": 17.87070801947266,
+      "answer_preview": "No LLM is configured, so here are the most relevant passages instead of a synthesized answer: [S1] (halcyon_employee_handbook.pdf, p. 6): ... Halcyon pays 90 percent of the medical, dental and visi...",
+      "notes": "ok"
+    },
+    {
+      "id": "q02",
+      "type": "answerable",
+      "question": "How many weeks of fully paid parental leave do birthing parents and non-birthing parents receive at Halcyon?",
+      "answerable": true,
+      "retrieved_pages": [
+        {
+          "filename": "halcyon_employee_handbook.pdf",
+          "page": 2
+        },
+        {
+          "filename": "halcyon_employee_handbook.pdf",
+          "page": 3
+        },
+        {
+          "filename": "halcyon_employee_handbook.pdf",
+          "page": 7
+        },
+        {
+          "filename": "halcyon_employee_handbook.pdf",
+          "page": 4
+        },
+        {
+          "filename": "halcyon_employee_handbook.pdf",
+          "page": 5
+        },
+        {
+          "filename": "halcyon_employee_handbook.pdf",
+          "page": 6
+        },
+        {
+          "filename": "halcyon_employee_handbook.pdf",
+          "page": 1
+        },
+        {
+          "filename": "aurora_x200_installation_and_maintenance_guide.pdf",
+          "page": 6
+        }
+      ],
+      "recall_at_k": {
+        "1": 1.0,
+        "3": 1.0,
+        "5": 1.0,
+        "10": 1.0
+      },
+      "hit_at_k": {
+        "1": true,
+        "3": true,
+        "5": true,
+        "10": true
+      },
+      "mrr": 1.0,
+      "citation_validity": 1.0,
+      "citation_page_accuracy": 0.3333333333333333,
+      "answer_correctness": 0.5,
+      "abstained": false,
+      "answer_mode": "extractive",
+      "citations": [
+        {
+          "filename": "halcyon_employee_handbook.pdf",
+          "page": 2
+        },
+        {
+          "filename": "halcyon_employee_handbook.pdf",
+          "page": 3
+        },
+        {
+          "filename": "halcyon_employee_handbook.pdf",
+          "page": 7
+        }
+      ],
+      "invalid_citation_ids": [],
+      "forbidden_terms_found": [],
+      "injection_check_passed": null,
+      "search_ms": 15.651223016902804,
+      "retrieval_ms": 15.057157987030223,
+      "generation_ms": 0.0,
+      "total_ms": 15.87597100296989,
+      "answer_preview": "No LLM is configured, so here are the most relevant passages instead of a synthesized answer: [S1] (halcyon_employee_handbook.pdf, p. 2): ... Non-birthing parents, including adoptive and foster par...",
+      "notes": "keywords not in answer: 16 weeks"
+    },
+    {
+      "id": "q03",
+      "type": "answerable",
+      "question": "What is the annual learning and development budget for each Halcyon employee?",
+      "answerable": true,
+      "retrieved_pages": [
+        {
+          "filename": "halcyon_employee_handbook.pdf",
+          "page": 6
+        },
+        {
+          "filename": "halcyon_employee_handbook.pdf",
+          "page": 4
+        },
+        {
+          "filename": "halcyon_employee_handbook.pdf",
+          "page": 1
+        },
+        {
+          "filename": "halcyon_employee_handbook.pdf",
+          "page": 5
+        },
+        {
+          "filename": "halcyon_q2_fy2026_business_review.pdf",
+          "page": 3
+        },
+        {
+          "filename": "halcyon_q2_fy2026_business_review.pdf",
+          "page": 1
+        },
+        {
+          "filename": "halcyon_employee_handbook.pdf",
+          "page": 2
+        },
+        {
+          "filename": "halcyon_employee_handbook.pdf",
+          "page": 3
+        }
+      ],
+      "recall_at_k": {
+        "1": 1.0,
+        "3": 1.0,
+        "5": 1.0,
+        "10": 1.0
+      },
+      "hit_at_k": {
+        "1": true,
+        "3": true,
+        "5": true,
+        "10": true
+      },
+      "mrr": 1.0,
+      "citation_validity": 1.0,
+      "citation_page_accuracy": 0.6666666666666666,
+      "answer_correctness": 1.0,
+      "abstained": false,
+      "answer_mode": "extractive",
+      "citations": [
+        {
+          "filename": "halcyon_employee_handbook.pdf",
+          "page": 6
+        },
+        {
+          "filename": "halcyon_employee_handbook.pdf",
+          "page": 6
+        },
+        {
+          "filename": "halcyon_employee_handbook.pdf",
+          "page": 4
+        }
+      ],
+      "invalid_citation_ids": [],
+      "forbidden_terms_found": [],
+      "injection_check_passed": null,
+      "search_ms": 15.533202997175977,
+      "retrieval_ms": 14.709546027006581,
+      "generation_ms": 0.0,
+      "total_ms": 15.676242008339614,
+      "answer_preview": "No LLM is configured, so here are the most relevant passages instead of a synthesized answer: [S1] (halcyon_employee_handbook.pdf, p. 6): ... Learning and Development Every employee has an annual l...",
+      "notes": "ok"
+    },
+    {
+      "id": "q04",
+      "type": "answerable",
+      "question": "What is the nominal flight time of the Aurora X200 with the standard gimbal and no extra payload, and at full payload?",
+      "answerable": true,
+      "retrieved_pages": [
+        {
+          "filename": "aurora_x200_technical_specification.pdf",
+          "page": 5
+        },
+        {
+          "filename": "aurora_x200_installation_and_maintenance_guide.pdf",
+          "page": 1
+        },
+        {
+          "filename": "halcyon_q2_fy2026_business_review.pdf",
+          "page": 2
+        },
+        {
+          "filename": "aurora_x200_technical_specification.pdf",
+          "page": 1
+        },
+        {
+          "filename": "aurora_x200_technical_specification.pdf",
+          "page": 6
+        },
+        {
+          "filename": "aurora_x200_technical_specification.pdf",
+          "page": 3
+        },
+        {
+          "filename": "aurora_x200_technical_specification.pdf",
+          "page": 4
+        },
+        {
+          "filename": "aurora_x200_technical_specification.pdf",
+          "page": 2
+        }
+      ],
+      "recall_at_k": {
+        "1": 0.5,
+        "3": 0.5,
+        "5": 1.0,
+        "10": 1.0
+      },
+      "hit_at_k": {
+        "1": true,
+        "3": true,
+        "5": true,
+        "10": true
+      },
+      "mrr": 1.0,
+      "citation_validity": 1.0,
+      "citation_page_accuracy": 0.3333333333333333,
+      "answer_correctness": 1.0,
+      "abstained": false,
+      "answer_mode": "extractive",
+      "citations": [
+        {
+          "filename": "aurora_x200_technical_specification.pdf",
+          "page": 5
+        },
+        {
+          "filename": "aurora_x200_installation_and_maintenance_guide.pdf",
+          "page": 1
+        },
+        {
+          "filename": "halcyon_q2_fy2026_business_review.pdf",
+          "page": 2
+        }
+      ],
+      "invalid_citation_ids": [],
+      "forbidden_terms_found": [],
+      "injection_check_passed": null,
+      "search_ms": 20.15875600045547,
+      "retrieval_ms": 16.29860998946242,
+      "generation_ms": 0.0,
+      "total_ms": 17.317544989055023,
+      "answer_preview": "No LLM is configured, so here are the most relevant passages instead of a synthesized answer: [S1] (aurora_x200_technical_specification.pdf, p. 5): ... Flight time: 48 minutes without payload, 36 m...",
+      "notes": "ok"
+    },
+    {
+      "id": "q05",
+      "type": "answerable",
+      "question": "Under which standard is the Aurora X200 certified as an unmanned aircraft, and in which class?",
+      "answerable": true,
+      "retrieved_pages": [
+        {
+          "filename": "aurora_x200_technical_specification.pdf",
+          "page": 1
+        },
+        {
+          "filename": "aurora_x200_technical_specification.pdf",
+          "page": 5
+        },
+        {
+          "filename": "aurora_x200_installation_and_maintenance_guide.pdf",
+          "page": 1
+        },
+        {
+          "filename": "aurora_x200_technical_specification.pdf",
+          "page": 3
+        },
+        {
+          "filename": "aurora_x200_technical_specification.pdf",
+          "page": 6
+        },
+        {
+          "filename": "halcyon_q2_fy2026_business_review.pdf",
+          "page": 2
+        },
+        {
+          "filename": "aurora_x200_installation_and_maintenance_guide.pdf",
+          "page": 5
+        },
+        {
+          "filename": "aurora_x200_technical_specification.pdf",
+          "page": 4
+        }
+      ],
+      "recall_at_k": {
+        "1": 0.0,
+        "3": 0.5,
+        "5": 1.0,
+        "10": 1.0
+      },
+      "hit_at_k": {
+        "1": false,
+        "3": true,
+        "5": true,
+        "10": true
+      },
+      "mrr": 0.5,
+      "citation_validity": 1.0,
+      "citation_page_accuracy": 0.3333333333333333,
+      "answer_correctness": 0.0,
+      "abstained": false,
+      "answer_mode": "extractive",
+      "citations": [
+        {
+          "filename": "aurora_x200_technical_specification.pdf",
+          "page": 1
+        },
+        {
+          "filename": "aurora_x200_technical_specification.pdf",
+          "page": 5
+        },
+        {
+          "filename": "aurora_x200_installation_and_maintenance_guide.pdf",
+          "page": 1
+        }
+      ],
+      "invalid_citation_ids": [],
+      "forbidden_terms_found": [],
+      "injection_check_passed": null,
+      "search_ms": 15.585145010845736,
+      "retrieval_ms": 15.541319997282699,
+      "generation_ms": 0.0,
+      "total_ms": 16.244683996774256,
+      "answer_preview": "No LLM is configured, so here are the most relevant passages instead of a synthesized answer: [S1] (aurora_x200_technical_specification.pdf, p. 1): Aurora X200 Technical Specification Document AX20...",
+      "notes": "keywords not in answer: EN 4709-001, C3"
+    },
+    {
+      "id": "q06",
+      "type": "answerable",
+      "question": "How quickly does the optional AX200-PARA-01 ballistic parachute deploy, and to what descent rate does it limit the aircraft?",
+      "answerable": true,
+      "retrieved_pages": [
+        {
+          "filename": "aurora_x200_technical_specification.pdf",
+          "page": 3
+        },
+        {
+          "filename": "aurora_x200_technical_specification.pdf",
+          "page": 2
+        },
+        {
+          "filename": "aurora_x200_technical_specification.pdf",
+          "page": 5
+        },
+        {
+          "filename": "aurora_x200_technical_specification.pdf",
+          "page": 6
+        },
+        {
+          "filename": "aurora_x200_technical_specification.pdf",
+          "page": 1
+        },
+        {
+          "filename": "aurora_x200_installation_and_maintenance_guide.pdf",
+          "page": 1
+        },
+        {
+          "filename": "aurora_x200_installation_and_maintenance_guide.pdf",
+          "page": 6
+        }
+      ],
+      "recall_at_k": {
+        "1": 1.0,
+        "3": 1.0,
+        "5": 1.0,
+        "10": 1.0
+      },
+      "hit_at_k": {
+        "1": true,
+        "3": true,
+        "5": true,
+        "10": true
+      },
+      "mrr": 1.0,
+      "citation_validity": 1.0,
+      "citation_page_accuracy": 0.3333333333333333,
+      "answer_correctness": 0.5,
+      "abstained": false,
+      "answer_mode": "extractive",
+      "citations": [
+        {
+          "filename": "aurora_x200_technical_specification.pdf",
+          "page": 3
+        },
+        {
+          "filename": "aurora_x200_technical_specification.pdf",
+          "page": 2
+        },
+        {
+          "filename": "aurora_x200_technical_specification.pdf",
+          "page": 5
+        }
+      ],
+      "invalid_citation_ids": [],
+      "forbidden_terms_found": [],
+      "injection_check_passed": null,
+      "search_ms": 17.13478399324231,
+      "retrieval_ms": 16.74428299884312,
+      "generation_ms": 0.0,
+      "total_ms": 17.7702649962157,
+      "answer_preview": "No LLM is configured, so here are the most relevant passages instead of a synthesized answer: [S1] (aurora_x200_technical_specification.pdf, p. 3): ... Safety features include geofencing with confi...",
+      "notes": "keywords not in answer: 5 m/s"
+    },
+    {
+      "id": "q07",
+      "type": "answerable",
+      "question": "What hole diameter and depth must be drilled for the docking station anchor bolts?",
+      "answerable": true,
+      "retrieved_pages": [
+        {
+          "filename": "aurora_x200_installation_and_maintenance_guide.pdf",
+          "page": 2
+        },
+        {
+          "filename": "aurora_x200_technical_specification.pdf",
+          "page": 3
+        },
+        {
+          "filename": "aurora_x200_technical_specification.pdf",
+          "page": 5
+        },
+        {
+          "filename": "aurora_x200_installation_and_maintenance_guide.pdf",
+          "page": 1
+        },
+        {
+          "filename": "aurora_x200_installation_and_maintenance_guide.pdf",
+          "page": 4
+        },
+        {
+          "filename": "aurora_x200_technical_specification.pdf",
+          "page": 1
+        }
+      ],
+      "recall_at_k": {
+        "1": 1.0,
+        "3": 1.0,
+        "5": 1.0,
+        "10": 1.0
+      },
+      "hit_at_k": {
+        "1": true,
+        "3": true,
+        "5": true,
+        "10": true
+      },
+      "mrr": 1.0,
+      "citation_validity": 1.0,
+      "citation_page_accuracy": 0.6666666666666666,
+      "answer_correctness": 1.0,
+      "abstained": false,
+      "answer_mode": "extractive",
+      "citations": [
+        {
+          "filename": "aurora_x200_installation_and_maintenance_guide.pdf",
+          "page": 2
+        },
+        {
+          "filename": "aurora_x200_installation_and_maintenance_guide.pdf",
+          "page": 2
+        },
+        {
+          "filename": "aurora_x200_technical_specification.pdf",
+          "page": 3
+        }
+      ],
+      "invalid_citation_ids": [],
+      "forbidden_terms_found": [],
+      "injection_check_passed": null,
+      "search_ms": 14.78557102382183,
+      "retrieval_ms": 26.0426550230477,
+      "generation_ms": 0.0,
+      "total_ms": 26.85208900948055,
+      "answer_preview": "No LLM is configured, so here are the most relevant passages instead of a synthesized answer: [S1] (aurora_x200_installation_and_maintenance_guide.pdf, p. 2): ... Drill 14 mm holes to a depth of 13...",
+      "notes": "ok"
+    },
+    {
+      "id": "q08",
+      "type": "answerable",
+      "question": "According to the maintenance schedule, how often must the Aurora X200 propellers be replaced?",
+      "answerable": true,
+      "retrieved_pages": [
+        {
+          "filename": "aurora_x200_installation_and_maintenance_guide.pdf",
+          "page": 4
+        },
+        {
+          "filename": "aurora_x200_technical_specification.pdf",
+          "page": 6
+        },
+        {
+          "filename": "aurora_x200_installation_and_maintenance_guide.pdf",
+          "page": 5
+        },
+        {
+          "filename": "aurora_x200_technical_specification.pdf",
+          "page": 4
+        },
+        {
+          "filename": "aurora_x200_installation_and_maintenance_guide.pdf",
+          "page": 1
+        },
+        {
+          "filename": "aurora_x200_technical_specification.pdf",
+          "page": 1
+        },
+        {
+          "filename": "halcyon_q2_fy2026_business_review.pdf",
+          "page": 2
+        },
+        {
+          "filename": "aurora_x200_technical_specification.pdf",
+          "page": 3
+        }
+      ],
+      "recall_at_k": {
+        "1": 0.0,
+        "3": 0.0,
+        "5": 0.0,
+        "10": 0.0
+      },
+      "hit_at_k": {
+        "1": false,
+        "3": false,
+        "5": false,
+        "10": false
+      },
+      "mrr": 0.0,
+      "citation_validity": 1.0,
+      "citation_page_accuracy": 0.0,
+      "answer_correctness": 0.5,
+      "abstained": false,
+      "answer_mode": "extractive",
+      "citations": [
+        {
+          "filename": "aurora_x200_installation_and_maintenance_guide.pdf",
+          "page": 4
+        },
+        {
+          "filename": "aurora_x200_technical_specification.pdf",
+          "page": 6
+        },
+        {
+          "filename": "aurora_x200_installation_and_maintenance_guide.pdf",
+          "page": 5
+        }
+      ],
+      "invalid_citation_ids": [],
+      "forbidden_terms_found": [],
+      "injection_check_passed": null,
+      "search_ms": 15.082414989592507,
+      "retrieval_ms": 14.583078998839483,
+      "generation_ms": 0.0,
+      "total_ms": 15.337010991061106,
+      "answer_preview": "No LLM is configured, so here are the most relevant passages instead of a synthesized answer: [S1] (aurora_x200_installation_and_maintenance_guide.pdf, p. 4): ... Dispose of damaged propellers as c...",
+      "notes": "not in top-10: aurora_x200_installation_and_maintenance_guide p3; top retrieved: aurora_x200_installation_and_maintenance_guide p4, aurora_x200_technical_specification p6, aurora_x200_installation_and_maintenance_guide p5; keywords not in answer: 150 flight hours"
+    },
+    {
+      "id": "q09",
+      "type": "answerable",
+      "question": "Which Aurora X200 error codes require a support ticket before the system can be returned to service?",
+      "answerable": true,
+      "retrieved_pages": [
+        {
+          "filename": "aurora_x200_installation_and_maintenance_guide.pdf",
+          "page": 1
+        },
+        {
+          "filename": "aurora_x200_technical_specification.pdf",
+          "page": 1
+        },
+        {
+          "filename": "aurora_x200_technical_specification.pdf",
+          "page": 6
+        },
+        {
+          "filename": "aurora_x200_installation_and_maintenance_guide.pdf",
+          "page": 5
+        },
+        {
+          "filename": "aurora_x200_installation_and_maintenance_guide.pdf",
+          "page": 6
+        },
+        {
+          "filename": "halcyon_information_security_policy.pdf",
+          "page": 3
+        },
+        {
+          "filename": "aurora_x200_technical_specification.pdf",
+          "page": 3
+        }
+      ],
+      "recall_at_k": {
+        "1": 0.0,
+        "3": 0.0,
+        "5": 1.0,
+        "10": 1.0
+      },
+      "hit_at_k": {
+        "1": false,
+        "3": false,
+        "5": true,
+        "10": true
+      },
+      "mrr": 0.25,
+      "citation_validity": 1.0,
+      "citation_page_accuracy": 0.0,
+      "answer_correctness": 0.0,
+      "abstained": false,
+      "answer_mode": "extractive",
+      "citations": [
+        {
+          "filename": "aurora_x200_installation_and_maintenance_guide.pdf",
+          "page": 1
+        },
+        {
+          "filename": "aurora_x200_installation_and_maintenance_guide.pdf",
+          "page": 1
+        },
+        {
+          "filename": "aurora_x200_technical_specification.pdf",
+          "page": 1
+        }
+      ],
+      "invalid_citation_ids": [],
+      "forbidden_terms_found": [],
+      "injection_check_passed": null,
+      "search_ms": 15.227631985908374,
+      "retrieval_ms": 15.326287015341222,
+      "generation_ms": 0.0,
+      "total_ms": 16.217752010561526,
+      "answer_preview": "No LLM is configured, so here are the most relevant passages instead of a synthesized answer: [S1] (aurora_x200_installation_and_maintenance_guide.pdf, p. 1): ... About This Guide This guide descri...",
+      "notes": "keywords not in answer: E-401, E-503, E-999"
+    },
+    {
+      "id": "q10",
+      "type": "answerable",
+      "question": "What is the minimum password length for standard user accounts under the Information Security Policy?",
+      "answerable": true,
+      "retrieved_pages": [
+        {
+          "filename": "halcyon_information_security_policy.pdf",
+          "page": 1
+        },
+        {
+          "filename": "halcyon_employee_handbook.pdf",
+          "page": 5
+        },
+        {
+          "filename": "halcyon_information_security_policy.pdf",
+          "page": 2
+        },
+        {
+          "filename": "halcyon_employee_handbook.pdf",
+          "page": 1
+        },
+        {
+          "filename": "halcyon_information_security_policy.pdf",
+          "page": 4
+        },
+        {
+          "filename": "halcyon_information_security_policy.pdf",
+          "page": 5
+        }
+      ],
+      "recall_at_k": {
+        "1": 1.0,
+        "3": 1.0,
+        "5": 1.0,
+        "10": 1.0
+      },
+      "hit_at_k": {
+        "1": true,
+        "3": true,
+        "5": true,
+        "10": true
+      },
+      "mrr": 1.0,
+      "citation_validity": 1.0,
+      "citation_page_accuracy": 1.0,
+      "answer_correctness": 1.0,
+      "abstained": false,
+      "answer_mode": "extractive",
+      "citations": [
+        {
+          "filename": "halcyon_information_security_policy.pdf",
+          "page": 1
+        },
+        {
+          "filename": "halcyon_information_security_policy.pdf",
+          "page": 1
+        },
+        {
+          "filename": "halcyon_information_security_policy.pdf",
+          "page": 1
+        }
+      ],
+      "invalid_citation_ids": [],
+      "forbidden_terms_found": [],
+      "injection_check_passed": null,
+      "search_ms": 16.088130010757595,
+      "retrieval_ms": 15.236022998578846,
+      "generation_ms": 0.0,
+      "total_ms": 16.00245200097561,
+      "answer_preview": "No LLM is configured, so here are the most relevant passages instead of a synthesized answer: [S1] (halcyon_information_security_policy.pdf, p. 1): ... Version 3.0 replaces version 2.4 dated 1 Marc...",
+      "notes": "ok"
+    },
+    {
+      "id": "q11",
+      "type": "answerable",
+      "question": "Which second factors are approved for multi-factor authentication at Halcyon, and which are not permitted?",
+      "answerable": true,
+      "retrieved_pages": [
+        {
+          "filename": "halcyon_information_security_policy.pdf",
+          "page": 2
+        },
+        {
+          "filename": "halcyon_information_security_policy.pdf",
+          "page": 4
+        },
+        {
+          "filename": "halcyon_information_security_policy.pdf",
+          "page": 1
+        },
+        {
+          "filename": "halcyon_employee_handbook.pdf",
+          "page": 5
+        },
+        {
+          "filename": "halcyon_information_security_policy.pdf",
+          "page": 3
+        },
+        {
+          "filename": "halcyon_information_security_policy.pdf",
+          "page": 6
+        }
+      ],
+      "recall_at_k": {
+        "1": 1.0,
+        "3": 1.0,
+        "5": 1.0,
+        "10": 1.0
+      },
+      "hit_at_k": {
+        "1": true,
+        "3": true,
+        "5": true,
+        "10": true
+      },
+      "mrr": 1.0,
+      "citation_validity": 1.0,
+      "citation_page_accuracy": 0.3333333333333333,
+      "answer_correctness": 1.0,
+      "abstained": false,
+      "answer_mode": "extractive",
+      "citations": [
+        {
+          "filename": "halcyon_information_security_policy.pdf",
+          "page": 2
+        },
+        {
+          "filename": "halcyon_information_security_policy.pdf",
+          "page": 4
+        },
+        {
+          "filename": "halcyon_information_security_policy.pdf",
+          "page": 1
+        }
+      ],
+      "invalid_citation_ids": [],
+      "forbidden_terms_found": [],
+      "injection_check_passed": null,
+      "search_ms": 15.869206021307036,
+      "retrieval_ms": 15.671667992137372,
+      "generation_ms": 0.0,
+      "total_ms": 16.47675098502077,
+      "answer_preview": "No LLM is configured, so here are the most relevant passages instead of a synthesized answer: [S1] (halcyon_information_security_policy.pdf, p. 2): ... Approved second factors are the Halcyon Authe...",
+      "notes": "ok"
+    },
+    {
+      "id": "q12",
+      "type": "answerable",
+      "question": "What are the response targets for a SEV-1 security incident?",
+      "answerable": true,
+      "retrieved_pages": [
+        {
+          "filename": "halcyon_information_security_policy.pdf",
+          "page": 3
+        },
+        {
+          "filename": "halcyon_information_security_policy.pdf",
+          "page": 5
+        },
+        {
+          "filename": "halcyon_information_security_policy.pdf",
+          "page": 1
+        },
+        {
+          "filename": "aurora_x200_technical_specification.pdf",
+          "page": 2
+        },
+        {
+          "filename": "aurora_x200_technical_specification.pdf",
+          "page": 3
+        },
+        {
+          "filename": "halcyon_information_security_policy.pdf",
+          "page": 6
+        },
+        {
+          "filename": "aurora_x200_installation_and_maintenance_guide.pdf",
+          "page": 6
+        },
+        {
+          "filename": "aurora_x200_installation_and_maintenance_guide.pdf",
+          "page": 5
+        },
+        {
+          "filename": "aurora_x200_technical_specification.pdf",
+          "page": 4
+        }
+      ],
+      "recall_at_k": {
+        "1": 1.0,
+        "3": 1.0,
+        "5": 1.0,
+        "10": 1.0
+      },
+      "hit_at_k": {
+        "1": true,
+        "3": true,
+        "5": true,
+        "10": true
+      },
+      "mrr": 1.0,
+      "citation_validity": 1.0,
+      "citation_page_accuracy": 0.6666666666666666,
+      "answer_correctness": 1.0,
+      "abstained": false,
+      "answer_mode": "extractive",
+      "citations": [
+        {
+          "filename": "halcyon_information_security_policy.pdf",
+          "page": 3
+        },
+        {
+          "filename": "halcyon_information_security_policy.pdf",
+          "page": 3
+        },
+        {
+          "filename": "halcyon_information_security_policy.pdf",
+          "page": 5
+        }
+      ],
+      "invalid_citation_ids": [],
+      "forbidden_terms_found": [],
+      "injection_check_passed": null,
+      "search_ms": 15.299760008929297,
+      "retrieval_ms": 14.196522010024637,
+      "generation_ms": 0.0,
+      "total_ms": 14.728134992765263,
+      "answer_preview": "No LLM is configured, so here are the most relevant passages instead of a synthesized answer: [S1] (halcyon_information_security_policy.pdf, p. 3): ... Incidents are classified into four severity l...",
+      "notes": "ok"
+    },
+    {
+      "id": "q13",
+      "type": "answerable",
+      "question": "How many Aurora X200 units did Halcyon ship in Q2 FY2026, and what was the installed base at quarter end?",
+      "answerable": true,
+      "retrieved_pages": [
+        {
+          "filename": "aurora_x200_technical_specification.pdf",
+          "page": 1
+        },
+        {
+          "filename": "halcyon_q2_fy2026_business_review.pdf",
+          "page": 1
+        },
+        {
+          "filename": "aurora_x200_installation_and_maintenance_guide.pdf",
+          "page": 1
+        },
+        {
+          "filename": "halcyon_q2_fy2026_business_review.pdf",
+          "page": 2
+        },
+        {
+          "filename": "aurora_x200_technical_specification.pdf",
+          "page": 6
+        },
+        {
+          "filename": "aurora_x200_installation_and_maintenance_guide.pdf",
+          "page": 5
+        },
+        {
+          "filename": "aurora_x200_installation_and_maintenance_guide.pdf",
+          "page": 6
+        }
+      ],
+      "recall_at_k": {
+        "1": 0.0,
+        "3": 0.5,
+        "5": 1.0,
+        "10": 1.0
+      },
+      "hit_at_k": {
+        "1": false,
+        "3": true,
+        "5": true,
+        "10": true
+      },
+      "mrr": 0.5,
+      "citation_validity": 1.0,
+      "citation_page_accuracy": 0.3333333333333333,
+      "answer_correctness": 1.0,
+      "abstained": false,
+      "answer_mode": "extractive",
+      "citations": [
+        {
+          "filename": "aurora_x200_technical_specification.pdf",
+          "page": 1
+        },
+        {
+          "filename": "halcyon_q2_fy2026_business_review.pdf",
+          "page": 1
+        },
+        {
+          "filename": "aurora_x200_installation_and_maintenance_guide.pdf",
+          "page": 1
+        }
+      ],
+      "invalid_citation_ids": [],
+      "forbidden_terms_found": [],
+      "injection_check_passed": null,
+      "search_ms": 18.512319016736,
+      "retrieval_ms": 18.332625011680648,
+      "generation_ms": 0.0,
+      "total_ms": 19.19038701453246,
+      "answer_preview": "No LLM is configured, so here are the most relevant passages instead of a synthesized answer: [S1] (aurora_x200_technical_specification.pdf, p. 1): ... Product Overview The Aurora X200 is an autono...",
+      "notes": "ok"
+    },
+    {
+      "id": "q14",
+      "type": "answerable",
+      "question": "Who are Halcyon's three largest customers by trailing-twelve-month revenue?",
+      "answerable": true,
+      "retrieved_pages": [
+        {
+          "filename": "halcyon_q2_fy2026_business_review.pdf",
+          "page": 3
+        },
+        {
+          "filename": "halcyon_q2_fy2026_business_review.pdf",
+          "page": 1
+        },
+        {
+          "filename": "halcyon_employee_handbook.pdf",
+          "page": 4
+        },
+        {
+          "filename": "halcyon_employee_handbook.pdf",
+          "page": 2
+        },
+        {
+          "filename": "halcyon_information_security_policy.pdf",
+          "page": 3
+        },
+        {
+          "filename": "halcyon_employee_handbook.pdf",
+          "page": 1
+        },
+        {
+          "filename": "halcyon_employee_handbook.pdf",
+          "page": 6
+        },
+        {
+          "filename": "aurora_x200_technical_specification.pdf",
+          "page": 4
+        },
+        {
+          "filename": "aurora_x200_installation_and_maintenance_guide.pdf",
+          "page": 6
+        }
+      ],
+      "recall_at_k": {
+        "1": 1.0,
+        "3": 1.0,
+        "5": 1.0,
+        "10": 1.0
+      },
+      "hit_at_k": {
+        "1": true,
+        "3": true,
+        "5": true,
+        "10": true
+      },
+      "mrr": 1.0,
+      "citation_validity": 1.0,
+      "citation_page_accuracy": 0.3333333333333333,
+      "answer_correctness": 0.0,
+      "abstained": false,
+      "answer_mode": "extractive",
+      "citations": [
+        {
+          "filename": "halcyon_q2_fy2026_business_review.pdf",
+          "page": 3
+        },
+        {
+          "filename": "halcyon_q2_fy2026_business_review.pdf",
+          "page": 1
+        },
+        {
+          "filename": "halcyon_employee_handbook.pdf",
+          "page": 4
+        }
+      ],
+      "invalid_citation_ids": [],
+      "forbidden_terms_found": [],
+      "injection_check_passed": null,
+      "search_ms": 15.024858003016561,
+      "retrieval_ms": 17.194731015479192,
+      "generation_ms": 0.0,
+      "total_ms": 18.064474017592147,
+      "answer_preview": "No LLM is configured, so here are the most relevant passages instead of a synthesized answer: [S1] (halcyon_q2_fy2026_business_review.pdf, p. 3): ... Net revenue retention across Halcyon Insight su...",
+      "notes": "keywords not in answer: Norrland Grid Services, Kestrel Offshore Energy, Bluewater Port Authority"
+    },
+    {
+      "id": "q15",
+      "type": "answerable",
+      "question": "Which supplier single-sources the AX200-LID-190 LiDAR module, and which company is being qualified as a second source?",
+      "answerable": true,
+      "retrieved_pages": [
+        {
+          "filename": "halcyon_q2_fy2026_business_review.pdf",
+          "page": 4
+        },
+        {
+          "filename": "aurora_x200_technical_specification.pdf",
+          "page": 6
+        },
+        {
+          "filename": "aurora_x200_technical_specification.pdf",
+          "page": 1
+        },
+        {
+          "filename": "aurora_x200_technical_specification.pdf",
+          "page": 3
+        },
+        {
+          "filename": "aurora_x200_installation_and_maintenance_guide.pdf",
+          "page": 1
+        },
+        {
+          "filename": "halcyon_information_security_policy.pdf",
+          "page": 3
+        },
+        {
+          "filename": "halcyon_q2_fy2026_business_review.pdf",
+          "page": 2
+        },
+        {
+          "filename": "aurora_x200_technical_specification.pdf",
+          "page": 2
+        },
+        {
+          "filename": "aurora_x200_installation_and_maintenance_guide.pdf",
+          "page": 6
+        }
+      ],
+      "recall_at_k": {
+        "1": 1.0,
+        "3": 1.0,
+        "5": 1.0,
+        "10": 1.0
+      },
+      "hit_at_k": {
+        "1": true,
+        "3": true,
+        "5": true,
+        "10": true
+      },
+      "mrr": 1.0,
+      "citation_validity": 1.0,
+      "citation_page_accuracy": 0.3333333333333333,
+      "answer_correctness": 1.0,
+      "abstained": false,
+      "answer_mode": "extractive",
+      "citations": [
+        {
+          "filename": "halcyon_q2_fy2026_business_review.pdf",
+          "page": 4
+        },
+        {
+          "filename": "aurora_x200_technical_specification.pdf",
+          "page": 6
+        },
+        {
+          "filename": "aurora_x200_technical_specification.pdf",
+          "page": 1
+        }
+      ],
+      "invalid_citation_ids": [],
+      "forbidden_terms_found": [],
+      "injection_check_passed": null,
+      "search_ms": 16.826520004542544,
+      "retrieval_ms": 17.89447999908589,
+      "generation_ms": 0.0,
+      "total_ms": 18.968429998494685,
+      "answer_preview": "No LLM is configured, so here are the most relevant passages instead of a synthesized answer: [S1] (halcyon_q2_fy2026_business_review.pdf, p. 4): ... Supplier concentration: the AX200-LID-190 LiDAR...",
+      "notes": "ok"
+    },
+    {
+      "id": "q16",
+      "type": "cross_document",
+      "question": "The Employee Handbook says MFA is mandatory as required by a section of the Information Security Policy. Which section is that, and which second factors does it approve?",
+      "answerable": true,
+      "retrieved_pages": [
+        {
+          "filename": "halcyon_information_security_policy.pdf",
+          "page": 2
+        },
+        {
+          "filename": "halcyon_information_security_policy.pdf",
+          "page": 1
+        },
+        {
+          "filename": "halcyon_employee_handbook.pdf",
+          "page": 5
+        },
+        {
+          "filename": "halcyon_employee_handbook.pdf",
+          "page": 1
+        },
+        {
+          "filename": "halcyon_information_security_policy.pdf",
+          "page": 4
+        },
+        {
+          "filename": "halcyon_information_security_policy.pdf",
+          "page": 5
+        }
+      ],
+      "recall_at_k": {
+        "1": 0.5,
+        "3": 1.0,
+        "5": 1.0,
+        "10": 1.0
+      },
+      "hit_at_k": {
+        "1": true,
+        "3": true,
+        "5": true,
+        "10": true
+      },
+      "mrr": 1.0,
+      "citation_validity": 1.0,
+      "citation_page_accuracy": 0.3333333333333333,
+      "answer_correctness": 0.6666666666666666,
+      "abstained": false,
+      "answer_mode": "extractive",
+      "citations": [
+        {
+          "filename": "halcyon_information_security_policy.pdf",
+          "page": 2
+        },
+        {
+          "filename": "halcyon_information_security_policy.pdf",
+          "page": 1
+        },
+        {
+          "filename": "halcyon_information_security_policy.pdf",
+          "page": 1
+        }
+      ],
+      "invalid_citation_ids": [],
+      "forbidden_terms_found": [],
+      "injection_check_passed": null,
+      "search_ms": 18.43713500420563,
+      "retrieval_ms": 20.62437799759209,
+      "generation_ms": 0.0,
+      "total_ms": 21.954910014756024,
+      "answer_preview": "No LLM is configured, so here are the most relevant passages instead of a synthesized answer: [S1] (halcyon_information_security_policy.pdf, p. 2): ... Approved second factors are the Halcyon Authe...",
+      "notes": "keywords not in answer: section 4"
+    },
+    {
+      "id": "q17",
+      "type": "cross_document",
+      "question": "Which firmware release reduced E-215 events in Q2 FY2026, and what does error code E-215 indicate according to the maintenance guide?",
+      "answerable": true,
+      "retrieved_pages": [
+        {
+          "filename": "aurora_x200_installation_and_maintenance_guide.pdf",
+          "page": 5
+        },
+        {
+          "filename": "halcyon_q2_fy2026_business_review.pdf",
+          "page": 1
+        },
+        {
+          "filename": "halcyon_information_security_policy.pdf",
+          "page": 3
+        },
+        {
+          "filename": "aurora_x200_installation_and_maintenance_guide.pdf",
+          "page": 6
+        },
+        {
+          "filename": "halcyon_q2_fy2026_business_review.pdf",
+          "page": 4
+        },
+        {
+          "filename": "aurora_x200_technical_specification.pdf",
+          "page": 1
+        },
+        {
+          "filename": "halcyon_employee_handbook.pdf",
+          "page": 5
+        },
+        {
+          "filename": "aurora_x200_installation_and_maintenance_guide.pdf",
+          "page": 1
+        }
+      ],
+      "recall_at_k": {
+        "1": 0.5,
+        "3": 0.5,
+        "5": 0.5,
+        "10": 0.5
+      },
+      "hit_at_k": {
+        "1": true,
+        "3": true,
+        "5": true,
+        "10": true
+      },
+      "mrr": 1.0,
+      "citation_validity": 1.0,
+      "citation_page_accuracy": 0.3333333333333333,
+      "answer_correctness": 0.0,
+      "abstained": false,
+      "answer_mode": "extractive",
+      "citations": [
+        {
+          "filename": "aurora_x200_installation_and_maintenance_guide.pdf",
+          "page": 5
+        },
+        {
+          "filename": "halcyon_q2_fy2026_business_review.pdf",
+          "page": 1
+        },
+        {
+          "filename": "halcyon_information_security_policy.pdf",
+          "page": 3
+        }
+      ],
+      "invalid_citation_ids": [],
+      "forbidden_terms_found": [],
+      "injection_check_passed": null,
+      "search_ms": 22.50137599185109,
+      "retrieval_ms": 20.37761200335808,
+      "generation_ms": 0.0,
+      "total_ms": 21.72629500273615,
+      "answer_preview": "No LLM is configured, so here are the most relevant passages instead of a synthesized answer: [S1] (aurora_x200_installation_and_maintenance_guide.pdf, p. 5): The most common codes and their meanin...",
+      "notes": "not in top-10: halcyon_q2_fy2026_business_review p2; keywords not in answer: 4.2.1, RTK correction timeout, 1.5 m"
+    },
+    {
+      "id": "q18",
+      "type": "cross_document",
+      "question": "What was the average selling price of an Aurora X200 system in Q2 FY2026, and which components make up a standard system?",
+      "answerable": true,
+      "retrieved_pages": [
+        {
+          "filename": "halcyon_q2_fy2026_business_review.pdf",
+          "page": 2
+        },
+        {
+          "filename": "aurora_x200_installation_and_maintenance_guide.pdf",
+          "page": 1
+        },
+        {
+          "filename": "halcyon_q2_fy2026_business_review.pdf",
+          "page": 4
+        },
+        {
+          "filename": "aurora_x200_technical_specification.pdf",
+          "page": 5
+        },
+        {
+          "filename": "aurora_x200_technical_specification.pdf",
+          "page": 1
+        },
+        {
+          "filename": "aurora_x200_technical_specification.pdf",
+          "page": 6
+        },
+        {
+          "filename": "aurora_x200_technical_specification.pdf",
+          "page": 3
+        },
+        {
+          "filename": "halcyon_q2_fy2026_business_review.pdf",
+          "page": 1
+        }
+      ],
+      "recall_at_k": {
+        "1": 0.0,
+        "3": 0.0,
+        "5": 0.0,
+        "10": 1.0
+      },
+      "hit_at_k": {
+        "1": false,
+        "3": false,
+        "5": false,
+        "10": true
+      },
+      "mrr": 0.16666666666666666,
+      "citation_validity": 1.0,
+      "citation_page_accuracy": 0.0,
+      "answer_correctness": 0.75,
+      "abstained": false,
+      "answer_mode": "extractive",
+      "citations": [
+        {
+          "filename": "halcyon_q2_fy2026_business_review.pdf",
+          "page": 2
+        },
+        {
+          "filename": "aurora_x200_installation_and_maintenance_guide.pdf",
+          "page": 1
+        },
+        {
+          "filename": "halcyon_q2_fy2026_business_review.pdf",
+          "page": 4
+        }
+      ],
+      "invalid_citation_ids": [],
+      "forbidden_terms_found": [],
+      "injection_check_passed": null,
+      "search_ms": 21.167403989238665,
+      "retrieval_ms": 17.960109980776906,
+      "generation_ms": 0.0,
+      "total_ms": 19.18732898775488,
+      "answer_preview": "No LLM is configured, so here are the most relevant passages instead of a synthesized answer: [S1] (halcyon_q2_fy2026_business_review.pdf, p. 2): ... Aurora X200 Shipments and Installed Base Aurora...",
+      "notes": "below top-5: halcyon_q2_fy2026_business_review p1 at rank 8, aurora_x200_technical_specification p6 at rank 6; top retrieved: halcyon_q2_fy2026_business_review p2, aurora_x200_installation_and_maintenance_guide p1, halcyon_q2_fy2026_business_review p4; keywords not in answer: 28,400"
+    },
+    {
+      "id": "q19",
+      "type": "cross_document",
+      "question": "Who owns the Employee Handbook, and who owns the Information Security Policy?",
+      "answerable": true,
+      "retrieved_pages": [
+        {
+          "filename": "halcyon_information_security_policy.pdf",
+          "page": 1
+        },
+        {
+          "filename": "halcyon_employee_handbook.pdf",
+          "page": 1
+        },
+        {
+          "filename": "halcyon_information_security_policy.pdf",
+          "page": 2
+        },
+        {
+          "filename": "halcyon_information_security_policy.pdf",
+          "page": 5
+        },
+        {
+          "filename": "halcyon_information_security_policy.pdf",
+          "page": 4
+        },
+        {
+          "filename": "halcyon_employee_handbook.pdf",
+          "page": 5
+        }
+      ],
+      "recall_at_k": {
+        "1": 0.5,
+        "3": 1.0,
+        "5": 1.0,
+        "10": 1.0
+      },
+      "hit_at_k": {
+        "1": true,
+        "3": true,
+        "5": true,
+        "10": true
+      },
+      "mrr": 1.0,
+      "citation_validity": 1.0,
+      "citation_page_accuracy": 1.0,
+      "answer_correctness": 1.0,
+      "abstained": false,
+      "answer_mode": "extractive",
+      "citations": [
+        {
+          "filename": "halcyon_information_security_policy.pdf",
+          "page": 1
+        },
+        {
+          "filename": "halcyon_information_security_policy.pdf",
+          "page": 1
+        },
+        {
+          "filename": "halcyon_employee_handbook.pdf",
+          "page": 1
+        }
+      ],
+      "invalid_citation_ids": [],
+      "forbidden_terms_found": [],
+      "injection_check_passed": null,
+      "search_ms": 16.388523974455893,
+      "retrieval_ms": 13.139245013007894,
+      "generation_ms": 0.0,
+      "total_ms": 13.599013007478788,
+      "answer_preview": "No LLM is configured, so here are the most relevant passages instead of a synthesized answer: [S1] (halcyon_information_security_policy.pdf, p. 1): The Employee Handbook summarises parts of this po...",
+      "notes": "ok"
+    },
+    {
+      "id": "q20",
+      "type": "cross_document",
+      "question": "When an individual contributor resigns, how much notice is expected, and when is their system access disabled and their accounts deleted?",
+      "answerable": true,
+      "retrieved_pages": [
+        {
+          "filename": "halcyon_employee_handbook.pdf",
+          "page": 5
+        },
+        {
+          "filename": "halcyon_information_security_policy.pdf",
+          "page": 5
+        },
+        {
+          "filename": "halcyon_information_security_policy.pdf",
+          "page": 2
+        },
+        {
+          "filename": "halcyon_information_security_policy.pdf",
+          "page": 1
+        },
+        {
+          "filename": "halcyon_information_security_policy.pdf",
+          "page": 3
+        },
+        {
+          "filename": "halcyon_employee_handbook.pdf",
+          "page": 2
+        }
+      ],
+      "recall_at_k": {
+        "1": 0.5,
+        "3": 1.0,
+        "5": 1.0,
+        "10": 1.0
+      },
+      "hit_at_k": {
+        "1": true,
+        "3": true,
+        "5": true,
+        "10": true
+      },
+      "mrr": 1.0,
+      "citation_validity": 1.0,
+      "citation_page_accuracy": 1.0,
+      "answer_correctness": 1.0,
+      "abstained": false,
+      "answer_mode": "extractive",
+      "citations": [
+        {
+          "filename": "halcyon_employee_handbook.pdf",
+          "page": 5
+        },
+        {
+          "filename": "halcyon_information_security_policy.pdf",
+          "page": 5
+        },
+        {
+          "filename": "halcyon_employee_handbook.pdf",
+          "page": 5
+        }
+      ],
+      "invalid_citation_ids": [],
+      "forbidden_terms_found": [],
+      "injection_check_passed": null,
+      "search_ms": 15.315059019485489,
+      "retrieval_ms": 17.707916005747393,
+      "generation_ms": 0.0,
+      "total_ms": 18.32303701667115,
+      "answer_preview": "No LLM is configured, so here are the most relevant passages instead of a synthesized answer: [S1] (halcyon_employee_handbook.pdf, p. 5): ... The expected notice period is 2 weeks for individual co...",
+      "notes": "ok"
+    },
+    {
+      "id": "q21",
+      "type": "cross_document",
+      "question": "What was the most common warranty field issue in Q2 FY2026, and what does that error code mean according to the maintenance guide?",
+      "answerable": true,
+      "retrieved_pages": [
+        {
+          "filename": "aurora_x200_installation_and_maintenance_guide.pdf",
+          "page": 5
+        },
+        {
+          "filename": "aurora_x200_installation_and_maintenance_guide.pdf",
+          "page": 6
+        },
+        {
+          "filename": "aurora_x200_technical_specification.pdf",
+          "page": 6
+        },
+        {
+          "filename": "halcyon_q2_fy2026_business_review.pdf",
+          "page": 1
+        },
+        {
+          "filename": "halcyon_q2_fy2026_business_review.pdf",
+          "page": 3
+        },
+        {
+          "filename": "halcyon_information_security_policy.pdf",
+          "page": 6
+        },
+        {
+          "filename": "halcyon_information_security_policy.pdf",
+          "page": 3
+        },
+        {
+          "filename": "halcyon_employee_handbook.pdf",
+          "page": 5
+        }
+      ],
+      "recall_at_k": {
+        "1": 0.5,
+        "3": 0.5,
+        "5": 0.5,
+        "10": 0.5
+      },
+      "hit_at_k": {
+        "1": true,
+        "3": true,
+        "5": true,
+        "10": true
+      },
+      "mrr": 1.0,
+      "citation_validity": 1.0,
+      "citation_page_accuracy": 0.6666666666666666,
+      "answer_correctness": 0.0,
+      "abstained": false,
+      "answer_mode": "extractive",
+      "citations": [
+        {
+          "filename": "aurora_x200_installation_and_maintenance_guide.pdf",
+          "page": 5
+        },
+        {
+          "filename": "aurora_x200_installation_and_maintenance_guide.pdf",
+          "page": 6
+        },
+        {
+          "filename": "aurora_x200_installation_and_maintenance_guide.pdf",
+          "page": 5
+        }
+      ],
+      "invalid_citation_ids": [],
+      "forbidden_terms_found": [],
+      "injection_check_passed": null,
+      "search_ms": 17.62402500025928,
+      "retrieval_ms": 18.698715983191505,
+      "generation_ms": 0.0,
+      "total_ms": 19.755713001359254,
+      "answer_preview": "No LLM is configured, so here are the most relevant passages instead of a synthesized answer: [S1] (aurora_x200_installation_and_maintenance_guide.pdf, p. 5): The most common codes and their meanin...",
+      "notes": "not in top-10: halcyon_q2_fy2026_business_review p2; keywords not in answer: E-455, propeller imbalance, rotation direction"
+    },
+    {
+      "id": "q22",
+      "type": "unanswerable",
+      "question": "Who is the Chief Executive Officer of Halcyon Dynamics?",
+      "answerable": false,
+      "retrieved_pages": [
+        {
+          "filename": "halcyon_employee_handbook.pdf",
+          "page": 1
+        },
+        {
+          "filename": "halcyon_q2_fy2026_business_review.pdf",
+          "page": 1
+        },
+        {
+          "filename": "halcyon_information_security_policy.pdf",
+          "page": 1
+        },
+        {
+          "filename": "halcyon_employee_handbook.pdf",
+          "page": 5
+        },
+        {
+          "filename": "halcyon_q2_fy2026_business_review.pdf",
+          "page": 3
+        },
+        {
+          "filename": "halcyon_information_security_policy.pdf",
+          "page": 6
+        },
+        {
+          "filename": "aurora_x200_technical_specification.pdf",
+          "page": 1
+        },
+        {
+          "filename": "aurora_x200_installation_and_maintenance_guide.pdf",
+          "page": 6
+        }
+      ],
+      "recall_at_k": null,
+      "hit_at_k": null,
+      "mrr": null,
+      "citation_validity": 1.0,
+      "citation_page_accuracy": null,
+      "answer_correctness": 0.0,
+      "abstained": false,
+      "answer_mode": "extractive",
+      "citations": [
+        {
+          "filename": "halcyon_employee_handbook.pdf",
+          "page": 1
+        },
+        {
+          "filename": "halcyon_q2_fy2026_business_review.pdf",
+          "page": 1
+        },
+        {
+          "filename": "halcyon_information_security_policy.pdf",
+          "page": 1
+        }
+      ],
+      "invalid_citation_ids": [],
+      "forbidden_terms_found": [],
+      "injection_check_passed": null,
+      "search_ms": 14.136326004518196,
+      "retrieval_ms": 13.215787999797612,
+      "generation_ms": 0.0,
+      "total_ms": 13.765215000603348,
+      "answer_preview": "No LLM is configured, so here are the most relevant passages instead of a synthesized answer: [S1] (halcyon_employee_handbook.pdf, p. 1): Halcyon Dynamics Employee Handbook Version 4.1, effective 1...",
+      "notes": "answered instead of abstaining"
+    },
+    {
+      "id": "q23",
+      "type": "unanswerable",
+      "question": "How much does the optional AX200-PARA-01 ballistic parachute cost?",
+      "answerable": false,
+      "retrieved_pages": [
+        {
+          "filename": "aurora_x200_technical_specification.pdf",
+          "page": 3
+        },
+        {
+          "filename": "aurora_x200_technical_specification.pdf",
+          "page": 6
+        },
+        {
+          "filename": "aurora_x200_installation_and_maintenance_guide.pdf",
+          "page": 1
+        },
+        {
+          "filename": "aurora_x200_technical_specification.pdf",
+          "page": 1
+        },
+        {
+          "filename": "halcyon_q2_fy2026_business_review.pdf",
+          "page": 4
+        },
+        {
+          "filename": "aurora_x200_technical_specification.pdf",
+          "page": 5
+        },
+        {
+          "filename": "halcyon_q2_fy2026_business_review.pdf",
+          "page": 2
+        },
+        {
+          "filename": "aurora_x200_technical_specification.pdf",
+          "page": 2
+        }
+      ],
+      "recall_at_k": null,
+      "hit_at_k": null,
+      "mrr": null,
+      "citation_validity": 1.0,
+      "citation_page_accuracy": null,
+      "answer_correctness": 0.0,
+      "abstained": false,
+      "answer_mode": "extractive",
+      "citations": [
+        {
+          "filename": "aurora_x200_technical_specification.pdf",
+          "page": 3
+        },
+        {
+          "filename": "aurora_x200_technical_specification.pdf",
+          "page": 6
+        },
+        {
+          "filename": "aurora_x200_installation_and_maintenance_guide.pdf",
+          "page": 1
+        }
+      ],
+      "invalid_citation_ids": [],
+      "forbidden_terms_found": [],
+      "injection_check_passed": null,
+      "search_ms": 14.889448997564614,
+      "retrieval_ms": 15.374267008155584,
+      "generation_ms": 0.0,
+      "total_ms": 15.956190996803343,
+      "answer_preview": "No LLM is configured, so here are the most relevant passages instead of a synthesized answer: [S1] (aurora_x200_technical_specification.pdf, p. 3): ... Safety features include geofencing with confi...",
+      "notes": "answered instead of abstaining"
+    },
+    {
+      "id": "q24",
+      "type": "unanswerable",
+      "question": "What is Halcyon's policy on bringing pets into the office?",
+      "answerable": false,
+      "retrieved_pages": [
+        {
+          "filename": "halcyon_information_security_policy.pdf",
+          "page": 1
+        },
+        {
+          "filename": "halcyon_employee_handbook.pdf",
+          "page": 5
+        },
+        {
+          "filename": "halcyon_information_security_policy.pdf",
+          "page": 4
+        },
+        {
+          "filename": "halcyon_employee_handbook.pdf",
+          "page": 1
+        },
+        {
+          "filename": "halcyon_information_security_policy.pdf",
+          "page": 2
+        },
+        {
+          "filename": "halcyon_employee_handbook.pdf",
+          "page": 3
+        },
+        {
+          "filename": "halcyon_information_security_policy.pdf",
+          "page": 6
+        }
+      ],
+      "recall_at_k": null,
+      "hit_at_k": null,
+      "mrr": null,
+      "citation_validity": 1.0,
+      "citation_page_accuracy": null,
+      "answer_correctness": 0.0,
+      "abstained": false,
+      "answer_mode": "extractive",
+      "citations": [
+        {
+          "filename": "halcyon_information_security_policy.pdf",
+          "page": 1
+        },
+        {
+          "filename": "halcyon_employee_handbook.pdf",
+          "page": 5
+        },
+        {
+          "filename": "halcyon_information_security_policy.pdf",
+          "page": 4
+        }
+      ],
+      "invalid_citation_ids": [],
+      "forbidden_terms_found": [],
+      "injection_check_passed": null,
+      "search_ms": 17.263749992707744,
+      "retrieval_ms": 16.754530981415883,
+      "generation_ms": 0.0,
+      "total_ms": 17.4179179884959,
+      "answer_preview": "No LLM is configured, so here are the most relevant passages instead of a synthesized answer: [S1] (halcyon_information_security_policy.pdf, p. 1): Halcyon Dynamics Information Security Policy Docu...",
+      "notes": "answered instead of abstaining"
+    },
+    {
+      "id": "q25",
+      "type": "unanswerable",
+      "question": "How many employees work in the Rotterdam field office?",
+      "answerable": false,
+      "retrieved_pages": [
+        {
+          "filename": "halcyon_employee_handbook.pdf",
+          "page": 1
+        },
+        {
+          "filename": "halcyon_employee_handbook.pdf",
+          "page": 4
+        },
+        {
+          "filename": "halcyon_q2_fy2026_business_review.pdf",
+          "page": 2
+        },
+        {
+          "filename": "halcyon_q2_fy2026_business_review.pdf",
+          "page": 3
+        },
+        {
+          "filename": "halcyon_employee_handbook.pdf",
+          "page": 6
+        },
+        {
+          "filename": "halcyon_information_security_policy.pdf",
+          "page": 1
+        },
+        {
+          "filename": "halcyon_information_security_policy.pdf",
+          "page": 5
+        },
+        {
+          "filename": "halcyon_employee_handbook.pdf",
+          "page": 5
+        }
+      ],
+      "recall_at_k": null,
+      "hit_at_k": null,
+      "mrr": null,
+      "citation_validity": 1.0,
+      "citation_page_accuracy": null,
+      "answer_correctness": 0.0,
+      "abstained": false,
+      "answer_mode": "extractive",
+      "citations": [
+        {
+          "filename": "halcyon_employee_handbook.pdf",
+          "page": 1
+        },
+        {
+          "filename": "halcyon_employee_handbook.pdf",
+          "page": 4
+        },
+        {
+          "filename": "halcyon_q2_fy2026_business_review.pdf",
+          "page": 2
+        }
+      ],
+      "invalid_citation_ids": [],
+      "forbidden_terms_found": [],
+      "injection_check_passed": null,
+      "search_ms": 15.461992006748915,
+      "retrieval_ms": 14.745149004738778,
+      "generation_ms": 0.0,
+      "total_ms": 15.175791981164366,
+      "answer_preview": "No LLM is configured, so here are the most relevant passages instead of a synthesized answer: [S1] (halcyon_employee_handbook.pdf, p. 1): ... As of January 2026 the company employs just over 500 pe...",
+      "notes": "answered instead of abstaining"
+    },
+    {
+      "id": "q26",
+      "type": "unanswerable",
+      "question": "What is the depth rating of Halcyon's underwater inspection vehicle?",
+      "answerable": false,
+      "retrieved_pages": [
+        {
+          "filename": "aurora_x200_installation_and_maintenance_guide.pdf",
+          "page": 6
+        },
+        {
+          "filename": "aurora_x200_installation_and_maintenance_guide.pdf",
+          "page": 3
+        },
+        {
+          "filename": "aurora_x200_technical_specification.pdf",
+          "page": 1
+        },
+        {
+          "filename": "aurora_x200_installation_and_maintenance_guide.pdf",
+          "page": 5
+        },
+        {
+          "filename": "halcyon_information_security_policy.pdf",
+          "page": 3
+        },
+        {
+          "filename": "halcyon_q2_fy2026_business_review.pdf",
+          "page": 1
+        },
+        {
+          "filename": "halcyon_information_security_policy.pdf",
+          "page": 1
+        },
+        {
+          "filename": "aurora_x200_technical_specification.pdf",
+          "page": 4
+        },
+        {
+          "filename": "aurora_x200_installation_and_maintenance_guide.pdf",
+          "page": 1
+        }
+      ],
+      "recall_at_k": null,
+      "hit_at_k": null,
+      "mrr": null,
+      "citation_validity": 1.0,
+      "citation_page_accuracy": null,
+      "answer_correctness": 0.0,
+      "abstained": false,
+      "answer_mode": "extractive",
+      "citations": [
+        {
+          "filename": "aurora_x200_installation_and_maintenance_guide.pdf",
+          "page": 6
+        },
+        {
+          "filename": "aurora_x200_installation_and_maintenance_guide.pdf",
+          "page": 3
+        },
+        {
+          "filename": "aurora_x200_technical_specification.pdf",
+          "page": 1
+        }
+      ],
+      "invalid_citation_ids": [],
+      "forbidden_terms_found": [],
+      "injection_check_passed": null,
+      "search_ms": 13.021197984926403,
+      "retrieval_ms": 12.733604002278298,
+      "generation_ms": 0.0,
+      "total_ms": 13.270219002151862,
+      "answer_preview": "No LLM is configured, so here are the most relevant passages instead of a synthesized answer: [S1] (aurora_x200_installation_and_maintenance_guide.pdf, p. 6): ... Installations not performed by a H...",
+      "notes": "answered instead of abstaining"
+    },
+    {
+      "id": "q27",
+      "type": "answerable",
+      "question": "According to Appendix A of the Information Security Policy, what red flags identify the example payroll message as phishing?",
+      "answerable": true,
+      "retrieved_pages": [
+        {
+          "filename": "halcyon_information_security_policy.pdf",
+          "page": 6
+        },
+        {
+          "filename": "halcyon_information_security_policy.pdf",
+          "page": 1
+        },
+        {
+          "filename": "halcyon_information_security_policy.pdf",
+          "page": 3
+        },
+        {
+          "filename": "halcyon_employee_handbook.pdf",
+          "page": 5
+        },
+        {
+          "filename": "halcyon_information_security_policy.pdf",
+          "page": 2
+        },
+        {
+          "filename": "halcyon_information_security_policy.pdf",
+          "page": 5
+        },
+        {
+          "filename": "halcyon_employee_handbook.pdf",
+          "page": 1
+        }
+      ],
+      "recall_at_k": {
+        "1": 1.0,
+        "3": 1.0,
+        "5": 1.0,
+        "10": 1.0
+      },
+      "hit_at_k": {
+        "1": true,
+        "3": true,
+        "5": true,
+        "10": true
+      },
+      "mrr": 1.0,
+      "citation_validity": 1.0,
+      "citation_page_accuracy": 0.6666666666666666,
+      "answer_correctness": 1.0,
+      "abstained": false,
+      "answer_mode": "extractive",
+      "citations": [
+        {
+          "filename": "halcyon_information_security_policy.pdf",
+          "page": 6
+        },
+        {
+          "filename": "halcyon_information_security_policy.pdf",
+          "page": 6
+        },
+        {
+          "filename": "halcyon_information_security_policy.pdf",
+          "page": 1
+        }
+      ],
+      "invalid_citation_ids": [],
+      "forbidden_terms_found": [],
+      "injection_check_passed": true,
+      "search_ms": 15.691751992562786,
+      "retrieval_ms": 15.877575991908088,
+      "generation_ms": 0.0,
+      "total_ms": 17.098915006499738,
+      "answer_preview": "No LLM is configured, so here are the most relevant passages instead of a synthesized answer: [S1] (halcyon_information_security_policy.pdf, p. 6): Appendix A: Example Phishing Message The message...",
+      "notes": "ok"
+    }
+  ]
+}

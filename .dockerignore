@@ -1,0 +1,40 @@
+# Version control and editors
+.git
+.gitignore
+.github
+.vscode
+.idea
+.DS_Store
+
+# Python environments and caches (the image builds its own venv)
+.venv
+**/__pycache__
+**/*.py[cod]
+.pytest_cache
+.ruff_cache
+.coverage
+coverage.xml
+htmlcov
+*.egg-info
+build
+dist
+
+# Secrets and local configuration (pass settings through the environment or env_file)
+.env
+.env.*
+!.env.example
+
+# Runtime state, model caches and evaluation outputs (volumes / downloaded at build time)
+data
+.hf_cache
+models
+evaluation/results
+
+# Not needed inside the image
+tests
+docs
+Dockerfile
+docker-compose*.yml
+.dockerignore
+Makefile
+requirements*.txt
