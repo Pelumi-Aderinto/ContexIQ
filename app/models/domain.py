@@ -58,7 +58,9 @@ class Chunk(BaseModel):
     chunk_index: int = Field(ge=0, description="0-based index of the chunk within the document.")
     text: str
     char_start: int = Field(ge=0, description="Start offset within the normalized page text.")
-    char_end: int = Field(ge=0, description="End offset (exclusive) within the normalized page text.")
+    char_end: int = Field(
+        ge=0, description="End offset (exclusive) within the normalized page text."
+    )
 
     @staticmethod
     def make_id(document_id: str, page_number: int, chunk_index: int) -> str:
