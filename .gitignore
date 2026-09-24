@@ -19,8 +19,8 @@ data/
 !data/.gitkeep
 
 # Model caches
-.hf_cache/
-models/
+/.hf_cache/
+/models/
 
 # Evaluation outputs are committed on purpose (they are the evidence behind README numbers)
 
